@@ -98,7 +98,7 @@
                 filter: blur(4px);
             }
 
-            .trace-anim {
+            .swarm-anim {
                 position: absolute;
                 z-index: 1;
                 top: 0rem;
@@ -107,7 +107,7 @@
                 overflow: visible;
             }
 
-            .trace-anim-controls {
+            .swarm-anim-controls {
                 position: fixed;
                 z-index: 3;
                 bottom: 2rem;
@@ -116,22 +116,6 @@
                 border-radius: 2rem;
                 border: 1px solid #333333;
                 background-color: #202020;
-            }
-
-            .trace-anim-controls .swarm-analogue {
-                display: inline-block;
-                vertical-align: top;
-                height: 1.5rem;
-                padding: 0.5rem;
-                padding-top: 1rem;
-            }
-
-            .trace-anim-controls .swarm-analogue > div {
-                display: inline-block;
-                vertical-align: top;
-                height: 0.5rem;
-                width: 0.5rem;
-                margin: 0rem 0.25rem;
             }
 
             .main-container {
@@ -355,17 +339,17 @@
                     display: inline-block !important;
                 }
 
-                .trace-anim-controls {
+                .swarm-anim-controls {
                     display: none;
                 }
             }
         </style>
     </head>
     <body>
-        <div data-mount-target="trace-anim"></div>
+        <div data-mount-target="swarm-anim"></div>
         <main class="main-container">
-            <div class="default-trace-target" data-trace-default="true"></div>
-            <div class="content-panel intro-content" data-trace-target="true">
+            <div class="default-trace-target" data-swarm-default="true"></div>
+            <div class="content-panel intro-content" data-swarm-target="true">
                 <h1>Hi, I'm Robin 👋</h1>
                 <h3 class="secondary">Sr. Software Developer and Engineer</h3>
                 <div class="badge-analogues">
@@ -375,13 +359,13 @@
                 </div>
             </div>
             <div class="main-content-area">
-                <div class="content-tabs" data-trace-target="true">
+                <div class="content-tabs" data-swarm-target="true">
                     <div aria-role="button" class="active">Competency</div>
                     <div aria-role="button">Objective</div>
                     <div aria-role="button">Experience</div>
                 </div>
                 <div class="tab-content active">
-                    <div class="content-panel body-content-a" data-trace-target="true">
+                    <div class="content-panel body-content-a" data-swarm-target="true">
                         <div class="footnote secondary"><b>Sec. 1.</b> General Competency</div>
                         A breadth of experience
                         <span class="secondary">
@@ -417,12 +401,12 @@
                             and to find every opportunity possible to
                         </span>
                         help my teammates on their roads to software expertise.
-                    </div><div class="content-panel body-content-b" data-trace-target="true">
+                    </div><div class="content-panel body-content-b" data-swarm-target="true">
                         <div class="chart-area" data-mount-target="competency-chart"></div>
                         <div class="footnote secondary"><b>Fig. 1. a)</b> Software Competency Self-Assessment</div>
                     </div>
                     <div dir="rtl">
-                        <div dir="ltr" class="content-panel body-content-a" data-trace-target="true">
+                        <div dir="ltr" class="content-panel body-content-a" data-swarm-target="true">
                             <div class="footnote secondary"><b>Sec. 2.</b> The Tech</div>
                             Having operated
                             <span class="secondary">
@@ -471,14 +455,14 @@
                                     </span>
                                 </li>
                             </ul>
-                        </div><div dir="ltr" class="content-panel body-content-b" data-trace-target="true">
+                        </div><div dir="ltr" class="content-panel body-content-b" data-swarm-target="true">
                             <div class="chart-area" data-mount-target="language-chart"></div>
                             <div class="footnote secondary"><b>Fig. 2. a)</b> Language Familiarity</div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-content">
-                    <div class="content-panel body-content-c" data-trace-target="true">
+                    <div class="content-panel body-content-c" data-swarm-target="true">
                         <div class="footnote secondary"><b>Sec. 3.</b> Opportunity Alignment</div>
                         <br/>
                         I'm looking for opportunities
@@ -507,7 +491,7 @@
                         </span>
                         good mentorship, healthy team culture, and work-life balance.
                     </div>
-                    <div class="content-panel body-content-c" data-trace-target="true">
+                    <div class="content-panel body-content-c" data-swarm-target="true">
                         <div class="footnote secondary"><b>Sec. 3. a)</b> Approximate Expectations</div>
                         <div class="badge-analogues">
                             <div class="type-b">role title <span>senior, technical lead, or staff</span></div>
@@ -521,10 +505,10 @@
                     </div>
                 </div>
                 <div class="tab-content">
-                    <div class="content-panel body-content-c" data-trace-target="true">
+                    <div class="content-panel body-content-c" data-swarm-target="true">
                         <div class="footnote secondary no-margin"><b>Sec. 4.</b> Professional Experience</div>
                     </div>
-                    <div class="content-panel body-content-a smaller-text" data-trace-target="true">
+                    <div class="content-panel body-content-a smaller-text" data-swarm-target="true">
                         <h3>Lead Frontend Developer</h3>
                         <div class="badge-analogues">
                             <div class="type-e">where <span>ehsAI</span></div>
@@ -564,7 +548,7 @@
                                 Designed and implemented novel algorithms and heuristics
                             </li>
                         </ul>
-                    </div><div class="content-panel body-content-b" data-trace-target="true">
+                    </div><div class="content-panel body-content-b" data-swarm-target="true">
                         <div class="footnote secondary no-margin"><b>Sec. 4. a)</b> Supplementary Experience</div>
                         <ul>
                             <li class="smallest-text">
@@ -583,7 +567,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="content-panel body-content-a smaller-text" data-trace-target="true">
+                    <div class="content-panel body-content-a smaller-text" data-swarm-target="true">
                         <h3>Software Developer, Consultant, and Vendor</h3>
                         <div class="badge-analogues">
                             <div class="type-e">where <span>self-employed</span></div>
@@ -615,7 +599,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="content-panel body-content-a smaller-text" data-trace-target="true">
+                    <div class="content-panel body-content-a smaller-text" data-swarm-target="true">
                         <h3>Technical Operations Officer</h3>
                         <div class="badge-analogues">
                             <div class="type-e">where <span>BC Legislature</span></div>
@@ -650,7 +634,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="content-panel body-content-a smaller-text" data-trace-target="true">
+                    <div class="content-panel body-content-a smaller-text" data-swarm-target="true">
                         <h3>Software Developer and Tutor</h3>
                         <div class="badge-analogues">
                             <div class="type-e">where <span>self-employed</span></div>
@@ -670,7 +654,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-panel secondary-content" data-trace-target="true">
+            <div class="content-panel secondary-content" data-swarm-target="true">
                 <h3>Contact</h3>
                 <span class="secondary" data-insert="email">thisisme@email.com</span> / <span class="secondary" data-insert="phone">555-555-555</span>
             </div>
@@ -685,7 +669,7 @@
         </script>
         <script src="https://cdn.jsdelivr.net/npm/preact@10.11.2/hooks/dist/hooks.js"></script>
 
-        <script id="trace-anim-script">{
+        <script id="swarm-anim-script">{
             const { Fragment, render, h } = preact;
             const { useState, useMemo, useEffect, useRef } = preactHooks;
 
@@ -752,17 +736,6 @@
                 return [updatedAgent, nearTarget];
             };
 
-            const cornersForElement = el => {
-                const bounds = el.getBoundingClientRect();
-                    
-                return [
-                    { y: bounds.top, x: bounds.left },
-                    { y: bounds.top, x: bounds.left + bounds.width },
-                    { y: bounds.top + bounds.height, x: bounds.left + bounds.width },
-                    { y: bounds.top + bounds.height, x: bounds.left }
-                ];
-            };
-
             const useTargeting = () => {
                 const [target, setTarget] = useState(null);
 
@@ -770,7 +743,7 @@
                     const handleTargetEnter = event => setTarget(event.target);
                     const handleTargetLeave = () => setTarget(null);
 
-                    const targets = document.querySelectorAll('[data-trace-target="true"]');
+                    const targets = document.querySelectorAll('[data-swarm-target="true"]');
                     for (const target of targets) {
                         target.addEventListener('mouseenter', handleTargetEnter);
                         target.addEventListener('mouseleave', handleTargetLeave);
@@ -785,7 +758,7 @@
                 }, []);
 
                 const defaultTarget = useMemo(() => (
-                    document.querySelector('[data-trace-default="true"]')
+                    document.querySelector('[data-swarm-default="true"]')
                 ), []);
 
                 return [target, defaultTarget];
@@ -822,7 +795,7 @@
             const useSwarm = initialSize => {
                 const [viewport, mouse] = useViewport();
                 const [target, defaultTarget] = useTargeting();
-                const [swarm, setwarm] = useState(
+                const [swarm, setSwarm] = useState(
                     new Array(initialSize).fill(0).map(() => createSwarmAgent({
                         x: viewport.w / 2,
                         y: viewport.h / 2
@@ -835,8 +808,8 @@
                 const mouseRef = useRef();
                 mouseRef.current = mouse;
 
-                const setize = newSize => {
-                    setwarm(swarm => [
+                const setSize = newSize => {
+                    setSwarm(swarm => [
                         ...swarm.slice(0, newSize),
                         ...(
                             newSize > swarm.length ?     
@@ -870,7 +843,7 @@
                         }
 
                         let anyAgentNearTarget = false;
-                        setwarm(swarm => (
+                        setSwarm(swarm => (
                             swarm.map(agent => {
                                 const [updatedAgent, nearTarget] = updateSwarmAgent(agent, target);
 
@@ -890,19 +863,18 @@
                     return () => window.clearInterval(tick);
                 }, []);
 
-                return [swarm, viewport, setize];
+                return [swarm, viewport, setSize];
             };
 
             const SwarmAnimation = () => {
-                const size = 5;
-                const [swarm, viewport, setize] = useSwarm(size);
+                const [swarm, viewport, setSize] = useSwarm(8);
 
                 return (
                     h('div', {
-                        class: 'trace-anim-container'
+                        class: 'swarm-anim-container'
                     }, [
                         h('svg', {
-                            class: 'trace-anim',
+                            class: 'swarm-anim',
                             viewBox: '0 0 1 1',
                             preserveAspectRatio: 'none',
                             style: {
@@ -915,39 +887,27 @@
                                     key: k,
                                     x: agent.x / viewport.w,
                                     y: agent.y / viewport.h,
-                                    fill: d3.interpolateRainbow(k / size),
+                                    fill: d3.interpolateRainbow(k / 5),
                                     width: 4 / viewport.w,
                                     height: 4 / viewport.h
                                 })
                             )
                         ))),
                         h('div', {
-                            class: 'trace-anim-controls'
+                            class: 'swarm-anim-controls'
                         }, [
-                            h('div', {
-                                class: 'swarm-analogue'
-                            }, (
-                                new Array(4).fill(0).map((d, i) => (
-                                    h('div', {
-                                        key: i,
-                                        style: {
-                                            'background-color': d3.interpolateRainbow(i / size)
-                                        }
-                                    })
-                                ))
-                            )),
                             h('button', {
-                                onClick: () => setize(swarm.length + 1)
+                                onClick: () => setSize(swarm.length + 1)
                             }, '🙂'),
                             h('button', {
-                                onClick: () => setize(swarm.length - 1)
+                                onClick: () => setSize(swarm.length - 1)
                             }, '💀')
                         ])
                     ])
                 );
             };
 
-            render(h(SwarmAnimation), document.querySelector('[data-mount-target="trace-anim"]'));
+            render(h(SwarmAnimation), document.querySelector('[data-mount-target="swarm-anim"]'));
         }</script>
 
         <script id="tabs-script">{
