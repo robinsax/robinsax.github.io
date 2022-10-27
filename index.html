@@ -897,11 +897,13 @@
                             class: 'swarm-anim-controls'
                         }, [
                             h('button', {
+                                title: 'Add a dot',
                                 onClick: () => setSize(swarm.length + 1)
-                            }, '🙂'),
+                            }, '➕'),
                             h('button', {
+                                title: 'Remove a dot',
                                 onClick: () => setSize(swarm.length - 1)
-                            }, '💀')
+                            }, '➖')
                         ])
                     ])
                 );
@@ -949,10 +951,10 @@
                     }
                 }, 1000);
 
-                window.removeEventListener('mousemove', performInsertions);
+                window.removeEventListener('scroll', performInsertions);
             };
 
-            window.addEventListener('mousemove', performInsertions);
+            window.addEventListener('scroll', performInsertions);
         }</script>
 
         <script id="chart-scripts">{
@@ -960,6 +962,7 @@
             const { useState, useMemo, useEffect, useRef } = preactHooks;
 
             const TAU = Math.PI * 2;
+            const GREY = '#999999';
 
             const code = src => {
                 const leadingWs = /^\s+/.exec(src);
@@ -967,10 +970,11 @@
 
                 const highlight = k => (_, m) => ['🗿', k, m, '🗿'].join('');
                 const color = m => (
-                    m == 5 ? '#999999' : d3.rgb(d3.interpolateRainbow(m / 5))
+                    m == 5 ? GREY : d3.rgb(d3.interpolateRainbow(m / 5))
                 );
 
                 return (
+                    '<span style="color: ' + GREY + '">// see #chart-scripts</span>\n\n' +
                     src.substring(indent)
                         .replace(new RegExp('\n' + new Array(indent).fill(' ').join(''), 'g'), '\n')
                         .replace(/(?<![a-z])([0-9\.]+)/g, highlight(0))
@@ -1114,19 +1118,26 @@
                     new Array(5).fill(0).map((_, i) => (i / 4) * guideCoef)
                 ), [guideCoef]);
 
-                const cartesian = (op, rCoef, d) => (
-                    radius + (radius * d * op(rCoef * TAU - (TAU * 0.25)))
+                const cartesian = (op, r, d) => (
+                    radius + (radius * d * op(r * TAU - (TAU / 4)))
                 );
 
-                const point = (datum, i) => {
-                    const k = i / data.length;
+                const [dataPoints, linePathD] = useMemo(() => {
+                    const points = data.map((datum, i) => {
+                        const k = i / data.length;
+
+                        return [
+                            cartesian(Math.cos, k, datum.value),
+                            cartesian(Math.sin, k, datum.value),
+                            datum
+                        ];
+                    });
 
                     return [
-                        cartesian(Math.cos, k, datum.value),
-                        cartesian(Math.sin, k, datum.value),
-                        datum
+                        points,
+                        d3.line()([...points, points[0]])
                     ];
-                };
+                }, [data]);
 
                 return (
                     h(Fragment, null, [
@@ -1138,9 +1149,9 @@
                             })
                         )),
                         h('path', {
-                            d: d3.line()([...data.map(point), point(data[0], 0)])
+                            d: linePathD
                         }),
-                        data.map(point).map(([x, y, item], i) => (
+                        dataPoints.map(([x, y, item], i) => (
                             h(Fragment, {
                                 key: item.label
                             }, [
@@ -1205,9 +1216,7 @@
                     duration: 1000
                 });
 
-                const itemHeight = useMemo(() => (
-                    height / dataset.length
-                ), [dataset, height]);
+                const itemHeight = height / dataset.length;
 
                 const point = (datum, i) => ([
                     width * datum.value,
@@ -1215,9 +1224,12 @@
                     datum
                 ]);
 
+                const dataPoints = useMemo(() => data.map(point), [data]);
+                const guidePoints = useMemo(() => guides.map(point), [guides]);
+
                 return (
                     h(Fragment, null, [
-                        guides.map(point).map(([x, y, guide]) => (
+                        guidePoints.map(([x, y, guide]) => (
                             h(Fragment, {
                                 key: guide.label
                             }, [
@@ -1234,7 +1246,7 @@
                                 ))
                             ])
                         )),
-                        data.map(point).map(([x, y, item], i) => (
+                        dataPoints.map(([x, y, item], i) => (
                             h(Fragment, {
                                 key: item.label
                             }, [
