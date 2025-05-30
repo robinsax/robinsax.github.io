@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Robin Saxifrage | Software Developer and Engineer</title>
+        <title>Robin Saxifrage | Sr. Software Developer</title>
 
         <!--
             This is the result of a few evenings' work, I certainly wouldn't claim everything in here
@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
         <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8"/>
         
         <style>
             * {
@@ -105,17 +106,6 @@
                 left: 0rem;
                 pointer-events: none;
                 overflow: visible;
-            }
-
-            .swarm-anim-controls {
-                position: fixed;
-                z-index: 3;
-                bottom: 2rem;
-                right: 2rem;
-                padding: 0.125rem 1rem;
-                border-radius: 2rem;
-                border: 1px solid #333333;
-                background-color: #202020;
             }
 
             .main-container {
@@ -320,7 +310,7 @@
 
                 .main-container {
                     width: 100%;
-                    padding-top: 16rem;
+                    padding-top: 6rem;
                 }
 
                 .content-panel {
@@ -338,10 +328,6 @@
                 .desktop-warning {
                     display: inline-block !important;
                 }
-
-                .swarm-anim-controls {
-                    display: none;
-                }
             }
         </style>
     </head>
@@ -351,9 +337,9 @@
             <div class="default-trace-target" data-swarm-default="true"></div>
             <div class="content-panel intro-content" data-swarm-target="true">
                 <h1>Hi, I'm Robin 👋</h1>
-                <h3 class="secondary">Sr. Software Developer and Engineer</h3>
+                <h3 class="secondary">Sr. Software Developer</h3>
                 <div class="badge-analogues">
-                    <div class="type-a">location <span>vancouver, bc</span></div>
+                    <div class="type-a">location <span>british columbia, canada</span></div>
                     <div class="type-b">opportunity search <span>active</span></div>
                     <div class="type-e desktop-warning">best viewed on <span>desktop</span></div>
                 </div>
@@ -361,8 +347,8 @@
             <div class="main-content-area">
                 <div class="content-tabs" data-swarm-target="true">
                     <div aria-role="button" class="active">Competency</div>
-                    <div aria-role="button">Objective</div>
                     <div aria-role="button">Experience</div>
+                    <div aria-role="button">Objective</div>
                 </div>
                 <div class="tab-content active">
                     <div class="content-panel body-content-a" data-swarm-target="true">
@@ -394,11 +380,11 @@
                         <br/>
                         <br/>
                         <span class="secondary">
-                            My professional ethos is to actively seek out
+                            My professional ethos is to actively seek out feedback on, and continually improve,
                         </span>
-                        robust discussions about both engineering and my management decisions,
+                        my technical and management decision making,
                         <span class="secondary">
-                            and to find every opportunity possible to
+                            while finding every opportunity possible to
                         </span>
                         help my teammates on their roads to software expertise.
                     </div><div class="content-panel body-content-b" data-swarm-target="true">
@@ -418,42 +404,46 @@
                             </span>
                             <br/>
                             <br/>
-                            I have experience with
+                            <span class="secondary">
+                                I have experience with
+                            </span>
                             <ul>
                                 <li>
-                                    Async and sync
+                                    Service and application development
                                     <span class="secondary">
-                                        microservice architectures using Kafka, RabbitMQ, and internal HTTP
-                                        for orchestration, with PostgreSQL, MySQL, MongoDB, and Redis for persistance
+                                        In a wide variety of languages and frameworks
                                     </span>
                                 </li>
                                 <li>
-                                    ML-based systems
+                                    Async and sync microservice architectures
                                     <span class="secondary">
-                                        comprised of a variety of deep learning components, and the associated
-                                        challenges with respect to model selection, data acquisition,
-                                        and QA/QC within that context
+                                        orchestrated internally via Kafka, Redis, and HTTP
                                     </span>
                                 </li>
                                 <li>
-                                    SDLC and DevOps tools
+                                    Infrastructure and DevOps implementation
                                     <span class="secondary">
-                                        including Docker, Kubernetes, and Terraform; various cloud, CI/CD, and
-                                        source control providers; and monitoring stacks including DataDog,
-                                        Grafana, and Kong
+                                        using Docker, Terraform, with Kubernetes or PaaS within various cloud providers,
+                                        paired various CI/CD providers and monitoring stacks
                                     </span>
                                 </li>
                                 <li>
-                                    Integrations developed over
+                                    Most commonly used integration protocols
                                     <span class="secondary">
-                                        REST, GraphQL, RPC, and WebSockets
+                                        including HTTP REST, GraphQL, RPC, and WebSockets
                                     </span>
                                 </li>
                                 <li>
                                     Modern frontend technologies
                                     <span class="secondary">
-                                        such as the IndexedDB, Worker, SharedWorker, ServiceWorker, WebGL, and
-                                        BroadcastChannel APIs, as well as WASM via Rust
+                                        such as the IndexedDB, SharedWorkers, ServiceWorkers, WebGL,
+                                        event-based architectures with BroadcastChannels, as well as Rust WASM
+                                    </span>
+                                </li>
+                                <li>
+                                    ML-based systems
+                                    <span class="secondary">
+                                        and the challenges of model selection, data sourcing, and QA/QC within that context
                                     </span>
                                 </li>
                             </ul>
@@ -465,67 +455,37 @@
                 </div>
                 <div class="tab-content">
                     <div class="content-panel body-content-c" data-swarm-target="true">
-                        <div class="footnote secondary"><b>Sec. 3.</b> Opportunity Alignment</div>
-                        <br/>
-                        I'm looking for opportunities
-                        <span class="secondary">
-                            that offer difficult technical challenges, on well-structured teams,
-                            in an environment where innovation is encouraged.
-                        </span>
-                        <br/>
-                        <br/>
-                        <span class="secondary">
-                            In recent years I've developed deep expertise in building and maintaining
-                        </span>
-                        extremely complex, high performance, back- and frontend systems.
-                        <span class="secondary">
-                            I've worked on and lead teams that are asked to go above and beyond their
-                            resources, and done so very successfully.
-                        </span>
-                        <br/><br/>
-                        <span class="secondary">
-                            For the next phase of my career, I'm searching for an organization with
-                        </span>
-                        well defined processess
-                        <span class="secondary">
-                            that, beyond delivering value rapidly (which is of course important, and fun!),
-                            also prioritizes allowing time for
-                        </span>
-                        good mentorship, healthy team culture, and work-life balance.
-                    </div>
-                    <div class="content-panel body-content-c" data-swarm-target="true">
-                        <div class="footnote secondary"><b>Sec. 3. a)</b> Approximate Expectations</div>
-                        <div class="badge-analogues">
-                            <div class="type-b">role title <span>senior, technical lead, or staff</span></div>
-                            <div class="type-a">vacation time <span>4+ weeks</span></div>
-                            <div class="type-e">modality <span>remote or hybrid</span></div>
-                            <div class="type-c">compensation <span>$170k+</span></div>
-                        </div>
-                        <div class="footnote secondary">
-                            * Regardless, if you have an interesting opportunity, I want to hear about it!
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-content">
-                    <div class="content-panel body-content-c" data-swarm-target="true">
                         <div class="footnote secondary no-margin"><b>Sec. 4.</b> Professional Experience</div>
                     </div>
                     <div class="content-panel body-content-a smaller-text" data-swarm-target="true">
-                        <h3>Consultant</h3>
+                        <h3>Consultant - Application Architect III</h3>
                         <div class="badge-analogues">
-                            <div class="type-e">where <span>Ministry of Agriculture and Agri-food</span></div>
+                            <div class="type-e">where <span>Ministry of Agriculture</span></div>
                             <div class="type-c">when <span>2023 to Current</span></div>
                         </div>
                         <br/>
+                        Outcome:
+                        <span class="secondary">
+                            Modern cloud infrastructure and DevOps workflow adoptions in enterprise, extensive improvements to data management solutions
+                        </span>
+                        <br/>
+                        <br/>
                         Stack:
                         <span class="secondary">
-                            Python, Docker, PostgreSQL, Redis, Solr, Terraform, Azure
+                            Python, PHP, Java, Docker, PostgreSQL, Redis, Terraform, Azure, AWS, Enterprise On-Prem
                         </span>
                         <ul class="secondary">
-                            <li>Working to help modernize cloud infrastructure, supporting tooling, and DevOps practices</li>
                             <li>
-                                Contributing to the management and delivery of datasets using CKAN, both internally and
-                                to the public
+                                Trailblazed migration of applications to modernized cloud infrastructures, supported by best-practice operational workflows
+                            </li>
+                            <li>
+                                Eliminated technical debt across codebases, deployments, and systems integrations
+                            </li>
+                            <li>
+                                Adapted open source tools for data management and publication to client needs
+                            </li>
+                            <li>
+                                Provided long-term operational support as well as staff training and mentorship
                             </li>
                         </ul>
                     </div><div class="content-panel body-content-b" data-swarm-target="true">
@@ -629,13 +589,13 @@
                         <br/>
                         Outcome:
                         <span class="secondary">
-                            Improved public access to official records, internal productivity improvements
+                            Improved public access to official records, internal production tooling improvements
                         </span>
                         <br/>
                         <br/>
                         Stack:
                         <span class="secondary">
-                            C#, Java, Python, JavaScript, CoffeeScript, XSLT, MySQL, MariaDB, On-prem infra
+                            C#, Java, Python, JavaScript, CoffeeScript, XSLT, MySQL, MariaDB, On-Prem
                         </span>
                         <ul class="secondary">
                             <li>
@@ -687,6 +647,36 @@
                         </span>
                     </div>
                 </div>
+                <div class="tab-content">
+                    <div class="content-panel body-content-c" data-swarm-target="true">
+                        <div class="footnote secondary"><b>Sec. 3.</b> Opportunity Alignment</div>
+                        <br/>
+                        I'm looking for opportunities
+                        <span class="secondary">
+                            that offer difficult technical challenges, on well-structured teams,
+                            in an environment where innovation is encouraged.
+                        </span>
+                        <br/>
+                        <br/>
+                        <span class="secondary">
+                            In recent years I've developed deep expertise in building and maintaining
+                        </span>
+                        complex, high performance back- and frontend systems.
+                        <span class="secondary">
+                            I've worked on and lead teams that are asked to go above and beyond their
+                            resources, and done so very successfully.
+                        </span>
+                        <br/><br/>
+                        <span class="secondary">
+                            I'm now searching for an organization seeking to solve
+                        </span>
+                        novel challenges
+                        <span class="secondary">
+                            that values
+                        </span>
+                        holding robust engineering discussions, enabling mentorship, and building healthy team culture.
+                    </div>
+                </div>
             </div>
             <div class="content-panel secondary-content" data-swarm-target="true">
                 <h3>Contact</h3>
@@ -721,7 +711,7 @@
             const createSwarmAgent = position => ({
                 x: position.x, y: position.y,
                 vX: 0, vY: 0,
-                vM: rand(3, 6), a: rand(0.1, 0.2),
+                vM: rand(3, 6), a: rand(0.2, 0.4),
                 oR: rand(0, Math.PI * 2),
                 oD: rand(25, 50),
                 vD: 0
@@ -926,19 +916,7 @@
                                     height: 4 / viewport.h
                                 })
                             )
-                        ))),
-                        h('div', {
-                            class: 'swarm-anim-controls'
-                        }, [
-                            h('button', {
-                                title: 'Add a dot',
-                                onClick: () => setSize(swarm.length + 1)
-                            }, '➕'),
-                            h('button', {
-                                title: 'Remove a dot',
-                                onClick: () => setSize(swarm.length - 1)
-                            }, '➖')
-                        ])
+                        )))
                     ])
                 );
             };
@@ -1217,10 +1195,10 @@
 
             const competency = [
                 { label: 'Development', value: 1 },
-                { label: 'Mentorship', value: 0.95 },
-                { label: 'Engineering', value: 0.9 },
-                { label: 'Infra and DevOps', value: 0.85 },
-                { label: 'Project Management', value: 0.8 }
+                { label: 'Mentorship', value: 0.9 },
+                { label: 'Architecture and Design', value: 0.9 },
+                { label: 'Infra and DevOps', value: 1 },
+                { label: 'Project Management', value: 0.7 }
             ];
             const radius = 150;
             render(
@@ -1304,14 +1282,14 @@
             // !language
 
             const languages = [
-                { label: 'TypeScript', value: 1 },
-                { label: 'Python', value: 0.9 },
-                { label: 'Golang', value: 0.85 },
-                { label: 'Rust', value: 0.8 },
+                { label: 'TypeScript and TSX', value: 1 },
+                { label: 'Python', value: 0.95 },
+                { label: 'Shell', value: 0.9 },
+                { label: 'Golang', value: 0.9 },
+                { label: 'Rust', value: 0.85 },
                 { label: 'Java', value: 0.75 },
                 { label: 'C#', value: 0.75 },
                 { label: 'C++', value: 0.75 },
-                { label: 'Shell', value: 0.7 },
                 { label: 'Swift', value: 0.5 },
                 { label: 'C', value: 0.4 },
                 { label: 'Elm', value: 0.2 }
